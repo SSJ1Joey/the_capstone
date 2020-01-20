@@ -1,91 +1,73 @@
-html,body,h1,h2,h3,h4,h5,h6 {
-  font-family: "Roboto", sans-serif;
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Style the navigation bar */
+.navbar {
+    width: 100%;
+    background-color: #494B4A;
+    overflow: auto;
+}
+  
+/* Navbar links */
+.navbar a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
 }
 
-.content-section{
-  margin: 4rem;
+/* Navbar links on mouse-over */
+.navbar a:hover {
+    background-color: #000;
 }
+
+/* Current/active navbar link */
+.active {
+    background-color:#49868C;
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+} 
 
 /* Footer */
 
 html {
-  position: relative;
-  min-height: 100%;
-  }
-
-  body {
-  margin: 0 0 100px; 
-  font-family: sans-serif;
-  }
-
-  .content { 
-  padding: 15px; 
-  box-sizing: border-box;
-  text-align: center;
-  }
-
-  footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 100px;
-  width: 100%;
-  color:#FFFFFF; 
-  background: black;
-  font-size:1.5em;
-  text-align: center;
-  line-height:100px;
-  }
-
-/* Gallery */
-
-* {
-  box-sizing: border-box;
+    position: relative;
+    min-height: 100%;
 }
-
+  
 body {
-  background-color: #f1f1f1;
-  padding: 20px;
-  font-family: Arial;
+    margin: 0 0 100px; 
+    font-family: sans-serif;
 }
 
-/* Center website */
-.main {
-  max-width: 1000px;
-  margin: auto;
+.content { 
+    padding: 15px; 
+    box-sizing: border-box;
+    text-align: center;
 }
 
-h1 {
-  font-size: 50px;
-  word-break: break-all;
-}
-
-.row {
-  margin: 8px -16px;
-}
-
-/* Add padding BETWEEN each column (if you want) */
-.row,
-.row > .column {
-  padding: 8px;
-}
-
-/* Create four equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 25%;
-}
-
-/* Clear floats after rows */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Content */
-.content {
-  background-color: white;
-  padding: 10px;
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    color:#FFFFFF; 
+    background: #494B4A;
+    font-size:1.5em;
+    text-align: center;
+    line-height:100px;
 }
 
