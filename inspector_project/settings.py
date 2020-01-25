@@ -33,13 +33,13 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'accounts.apps.AccountsConfig',
-    'inspector_app',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'contact',
     
     
 ]
@@ -128,6 +128,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'inspector_project/static')
 ]
 
+# Media Folder Settings
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-
-
