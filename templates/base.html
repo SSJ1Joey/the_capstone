@@ -16,9 +16,9 @@
   <!-- Navbar -->
 <div class="navbar">
     <a class="active" href="{% url 'home' %}"><i class="fa fa-fw fa-home"></i> Home</a>
-    <a href="{% url 'checklist' %}"><i class="fa fa-fw fa-pencil-square-o"></i> Checklist</a>
+    <a href="{% url 'checklist' %}"><i class="fa fa-fw fa-pencil-square-o"></i> Checklist
     <a href="{% url 'gallery' %}"><i class="fa fa-fw fa-picture-o"></i> Gallery</a>
-    <a href="{% url 'contact' %}"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+    <a href="{% url 'contact' %}"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
     <div class="topnav-right">
       <a href="{% url 'login' %}"><i class="fa fa-fw fa-user"></i> Login</a>
     </div>
@@ -26,6 +26,25 @@
       <a href="{% url 'register' %}"><i class="fa fa-fw fa-user-plus"></i> Register</a>
     </div>
 </div>
+
+
+  <!--Header-->
+<div class = "header">
+  {% if user.is_authenticated %}
+  <div class="welcome">
+  Welcome {{ user.username }}!
+  </div>
+    <div class="topnav-right-header">
+      <a href="javascript:{document.getElementById('logout').submit()}">
+        <i class="fa fa-sign-out"></i> Logout</a>
+    </div>
+    <form action="{% url 'logout' %}" method="POST" id="logout">
+      {% csrf_token %}
+      <input type="hidden">
+    </form>
+  {% endif %}
+</div>
+
 
 <div class="content">
     <section role="main"> 
