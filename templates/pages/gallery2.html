@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="pagination">
+  <a href="{% url 'gallery' %}">&laquo;</a>
+  <a href="{% url 'gallery' %}">1</a>
+  <a class="active" href="{% url 'gallery2' %}">2</a>
+  <a href="{% url 'gallery3' %}">3</a>
+  <a href="{% url 'gallery4' %}">4</a>
+  <a href="{% url 'gallery5' %}">5</a>
+  <a href="{% url 'gallery6' %}">6</a>
+  <a href="{% url 'gallery3' %}">&raquo;</a>
+</div>
+
+{% endblock %}

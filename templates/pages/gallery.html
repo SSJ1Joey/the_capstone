@@ -1,8 +1,24 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 
-<!-- Portfolio Gallery Grid -->
+<div class="gallery">
+    <a class="pic" target="_blank" href="{% static 'img/crawl-space-vent.jpg' %}">
+      <img src="{% static 'img/crawl-space-vent.jpg' %}" alt="" width="150" height="150">
+    </a>
+    <div class="desc">Something.</div>
+</div>
 
+<div class="pagination">
+  <a href="">&laquo;</a>
+  <a class="active" href="{% url 'gallery' %}">1</a>
+  <a href="{% url 'gallery2' %}">2</a>
+  <a href="{% url 'gallery3' %}">3</a>
+  <a href="{% url 'gallery4' %}">4</a>
+  <a href="{% url 'gallery5' %}">5</a>
+  <a href="{% url 'gallery6' %}">6</a>
+  <a href="{% url 'gallery2' %}">&raquo;</a>
+</div>
 
 {% endblock %}

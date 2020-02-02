@@ -15,18 +15,17 @@
 
   <!-- Navbar -->
 <div class="navbar">
-    <a class="active" href="{% url 'home' %}"><i class="fa fa-fw fa-home"></i> Home</a>
-    <a href="{% url 'checklist' %}"><i class="fa fa-fw fa-pencil-square-o"></i> Checklist
-    <a href="{% url 'gallery' %}"><i class="fa fa-fw fa-picture-o"></i> Gallery</a>
-    <a href="{% url 'contact' %}"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
-    <div class="topnav-right">
-      <a href="{% url 'login' %}"><i class="fa fa-fw fa-user"></i> Login</a>
-    </div>
-    <div class="topnav-right">
-      <a href="{% url 'register' %}"><i class="fa fa-fw fa-user-plus"></i> Register</a>
-    </div>
+  <li><a class="active" href="{% url 'home' %}"><i class="fa fa-fw fa-home"></i> Home</a></li>
+  <li><a href="{% url 'checklist' %}"><i class="fa fa-fw fa-pencil-square-o"></i> Checklist</a></li>
+  <li><a href="{% url 'gallery' %}"><i class="fa fa-fw fa-picture-o"></i> Gallery</a></li>
+  <li><a href="{% url 'contact' %}"><i class="fa fa-fw fa-envelope"></i> Contact</a></li>
+  <div class="topnav-right">
+    <li><a href="{% url 'login' %}"><i class="fa fa-fw fa-user"></i> Login</a></li>
+  </div>
+  <div class="topnav-right">
+    <li><a href="{% url 'register' %}"><i class="fa fa-fw fa-user-plus"></i> Register</a></li> 
+  </div> 
 </div>
-
 
   <!--Header-->
 <div class = "header">
@@ -46,17 +45,13 @@
 </div>
 
 
+
 <div class="content">
     <section role="main"> 
     
-  {% block content %} 
+{% block content %} 
   
-  {% endblock %}
-
-  <!-- Footer -->
-</section>
-</div>
-<footer>Footer Area</footer>
-    
+{% endblock %}
+  
 </body>
 </html>

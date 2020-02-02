@@ -5,7 +5,9 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('checklist', views.checklist, name='checklist'),
     path('gallery', views.gallery, name='gallery'),
-   # path('contact/', views.contact, name='contact'),
-    path('about', views.about, name='about'),
-    
+    path('gallery2', views.gallery2, name='gallery2'),
+    path('gallery3', views.gallery3, name='gallery3'),
+    path('gallery4', views.gallery4, name='gallery4'),
+    path('gallery5', views.gallery5, name='gallery5'),
+    path('gallery6', views.gallery6, name='gallery6'),
 ]
