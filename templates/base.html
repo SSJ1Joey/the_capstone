@@ -13,11 +13,17 @@
 </head>
 <body>
 
+  <!-- Header -->
+<div class="logo_bar">
+  <img class="logo" src="{% static 'img/logo.jpg' %}" alt=""> 
+  <h4>Welcome to some inspection app!</h4>
+</div>
+
   <!-- Navbar -->
 <div class="navbar">
   <li><a class="active" href="{% url 'home' %}"><i class="fa fa-fw fa-home"></i> Home</a></li>
   <li><a href="{% url 'checklist' %}"><i class="fa fa-fw fa-pencil-square-o"></i> Checklist</a></li>
-  <li><a href="{% url 'gallery' %}"><i class="fa fa-fw fa-picture-o"></i> Gallery</a></li>
+  <li><a href="{% url 'gallery' %}"><i class="fa fa-fw fa-picture-o"></i> Information</a></li>
   <li><a href="{% url 'contact' %}"><i class="fa fa-fw fa-envelope"></i> Contact</a></li>
   <div class="topnav-right">
     <li><a href="{% url 'login' %}"><i class="fa fa-fw fa-user"></i> Login</a></li>
@@ -27,7 +33,7 @@
   </div> 
 </div>
 
-  <!--Header-->
+  <!--Welcome-->
 <div class = "header">
   {% if user.is_authenticated %}
   <div class="welcome">
