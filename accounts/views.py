@@ -64,5 +64,5 @@ def logout(request):
         messages.success(request, 'You are now logged out')
         return redirect('home')
 
-def dashboard(request):
-    return render(request, 'accounts/dashboard.html')
+def profile(request):
+    return render(request, 'accounts/profile.html')

@@ -13,32 +13,27 @@
 </head>
 <body>
 
-  <!-- Header -->
-<div class="logo_bar">
-  <img class="logo" src="{% static 'img/logo.jpg' %}" alt=""> 
-  <h4>Welcome to some inspection app!</h4>
-</div>
-
   <!-- Navbar -->
-<div class="navbar">
+<div class="left-navbar">
   <li><a class="active" href="{% url 'home' %}"><i class="fa fa-fw fa-home"></i> Home</a></li>
   <li><a href="{% url 'checklist' %}"><i class="fa fa-fw fa-pencil-square-o"></i> Checklist</a></li>
-  <li><a href="{% url 'gallery' %}"><i class="fa fa-fw fa-picture-o"></i> Information</a></li>
+  <li><a href="{% url 'gallery' %}"><i class="fa fa-fw fa-picture-o"></i> Gallery</a></li>
   <li><a href="{% url 'contact' %}"><i class="fa fa-fw fa-envelope"></i> Contact</a></li>
+</div>
+
+
+<div class="right-navbar">
   <div class="topnav-right">
     <li><a href="{% url 'login' %}"><i class="fa fa-fw fa-user"></i> Login</a></li>
   </div>
   <div class="topnav-right">
     <li><a href="{% url 'register' %}"><i class="fa fa-fw fa-user-plus"></i> Register</a></li> 
-  </div> 
+  </div>
 </div>
 
-  <!--Welcome-->
-<div class = "header">
-  {% if user.is_authenticated %}
-  <div class="welcome">
-  Welcome {{ user.username }}!
-  </div>
+
+{% if user.is_authenticated %} 
+<div class = "right-navbar2">
     <div class="topnav-right-header">
       <a href="javascript:{document.getElementById('logout').submit()}">
         <i class="fa fa-sign-out"></i> Logout</a>
@@ -47,9 +42,12 @@
       {% csrf_token %}
       <input type="hidden">
     </form>
+    <div class="topnav-right-header">
+      <a href="{% url 'profile' %}">
+        <i class="fa fa-fw fa-user-circle"></i> Profile</a>
+    </div>
   {% endif %}
 </div>
-
 
 
 <div class="content">
